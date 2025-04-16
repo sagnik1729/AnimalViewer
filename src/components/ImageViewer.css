@@ -4,16 +4,28 @@
     font-family: sans-serif;
 }
 
-/* Thumbnails */
+/* — Thumbnails: horizontal, infinite scroll — */
 .thumbnails {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
     margin-bottom: 2rem;
+    scrollbar-width: thin;
 }
 
+.thumbnails::-webkit-scrollbar {
+    height: 8px;
+}
+
+.thumbnails::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/* Each thumbnail */
 .thumbnail {
+    flex: 0 0 auto;
     width: 120px;
     height: 120px;
     object-fit: cover;
@@ -32,7 +44,12 @@
     border: 3px solid #ffeb3b;
 }
 
-/* Creative Info Card */
+/* Invisible scroll‐trigger box */
+.loading-sentinel {
+    flex: 0 0 1px;
+}
+
+/* Creative “you picked” card */
 .selected-info {
     margin: 1rem auto;
     padding: 1rem;
@@ -44,7 +61,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Fixed Square Container */
+/* 1:1 square container for selected image */
 .selected-container {
     width: 500px;
     height: 500px;
