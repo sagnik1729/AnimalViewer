@@ -1,0 +1,62 @@
+.image-viewer {
+    text-align: center;
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
+/* Thumbnails */
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.thumbnail {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+    border: 3px solid transparent;
+}
+
+.thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail.active {
+    border: 3px solid #ffeb3b;
+}
+
+/* Creative Info Card */
+.selected-info {
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 400px;
+    background: #f0f4f8;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    color: #333;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fixed Square Container */
+.selected-container {
+    width: 500px;
+    height: 500px;
+    max-width: 90%;
+    margin: 1rem auto;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.selected-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
